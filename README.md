@@ -1,8 +1,8 @@
-[![Build Status](https://travis-ci.com/darkwizard242/ansible-role-mc.svg?branch=master)](https://travis-ci.com/darkwizard242/ansible-role-mc) ![Ansible Role](https://img.shields.io/ansible/role/48533?color=dark%20green%20) ![Ansible Role](https://img.shields.io/ansible/role/d/48533?label=role%20downloads) ![Ansible Quality Score](https://img.shields.io/ansible/quality/48533?label=ansible%20quality%20score) [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ansible-role-mc&metric=alert_status)](https://sonarcloud.io/dashboard?id=ansible-role-mc) ![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/darkwizard242/ansible-role-mc?label=release) ![GitHub repo size](https://img.shields.io/github/repo-size/darkwizard242/ansible-role-mc?color=orange&style=flat-square)
+[![Build Status](https://travis-ci.com/darkwizard242/ansible-role-mc.svg?branch=master)](https://travis-ci.com/darkwizard242/ansible-role-mc) ![Ansible Role](https://img.shields.io/ansible/role/49434?color=dark%20green%20) ![Ansible Role](https://img.shields.io/ansible/role/d/49434?label=role%20downloads) ![Ansible Quality Score](https://img.shields.io/ansible/quality/49434?label=ansible%20quality%20score) [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ansible-role-mc&metric=alert_status)](https://sonarcloud.io/dashboard?id=ansible-role-mc) ![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/darkwizard242/ansible-role-mc?label=release) ![GitHub repo size](https://img.shields.io/github/repo-size/darkwizard242/ansible-role-mc?color=orange&style=flat-square)
 
 # Ansible Role: mc
 
-Role to install (_by default_) [mc](https://github.com/minio/mc) on **Debian/Ubuntu** and **EL** systems. 'mc' is [MinIO](https://min.io/) client that supports interacting with filesystems and Amazon S3 compatible cloud storage service..
+Role to install (_by default_) [mc](https://github.com/minio/mc) on **Debian/Ubuntu** and **EL** systems. **mc** is [MinIO](https://min.io/) client that supports interacting with filesystems and Amazon S3 compatible cloud storage service..
 
 ## Requirements
 
