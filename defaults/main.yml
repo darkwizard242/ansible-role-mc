@@ -1,0 +1,7 @@
+---
+# defaults file for mc
+
+mc_app: mc
+mc_dl_url: https://dl.min.io/client/{{ mc_app }}/release/linux-amd64/{{ mc_app }}
+mc_bin_path: "/usr/local/bin/{{ mc_app }}"
+mc_bin_permission_mode: '0755'
