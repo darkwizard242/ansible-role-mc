@@ -1,0 +1,32 @@
+---
+galaxy_info:
+  role_name: mc
+  author: Ali Muhammad
+  description: Setups 'mc'. 'mc' is MinIO client that supports interacting with filesystems and Amazon S3 compatible cloud storage service.
+  company: none
+  license: MIT
+  min_ansible_version: 2.4
+
+  platforms:
+    - name: Ubuntu
+      versions:
+        - xenial
+        - bionic
+        - focal
+    - name: Debian
+      versions:
+        - jessie
+        - stretch
+        - buster
+    - name: EL
+      versions:
+        - 7
+        - 8
+
+  galaxy_tags:
+    - mc
+    - system
+    - os
+    - client
+    - minio
+    - objectstorage
