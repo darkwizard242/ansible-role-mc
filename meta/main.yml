@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   role_name: mc
-  author: Ali Muhammad
+  author: darkwizard242
   description: Setups 'mc'. 'mc' is MinIO client that supports interacting with filesystems and Amazon S3 compatible cloud storage service.
   company: none
   license: MIT
