@@ -2,6 +2,10 @@
 # defaults file for mc
 
 mc_app: mc
-mc_dl_url: https://dl.min.io/client/{{ mc_app }}/release/linux-amd64/{{ mc_app }}
+mc_os: linux
+mc_arch: amd64
+mc_dl_url: https://dl.min.io/client/{{ mc_app }}/release/{{ mc_os }}-{{ mc_arch }}/{{ mc_app }}
 mc_bin_path: "/usr/local/bin/{{ mc_app }}"
-mc_bin_permission_mode: '0755'
+mc_file_owner: root
+mc_file_group: root
+mc_file_mode: '0755'
