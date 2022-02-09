@@ -18,17 +18,21 @@ Available variables are listed below (located in `defaults/main.yml`):
 mc_app: mc
 mc_dl_url: https://dl.min.io/client/{{ mc_app }}/release/linux-amd64/{{ mc_app }}
 mc_bin_path: "/usr/local/bin/{{ mc_app }}"
-mc_bin_permission_mode: '0755'
+mc_file_owner: root
+mc_file_group: root
+mc_file_mode: '0755'
 ```
 
 ### Variables table:
 
-Variable               | Value (default)                                                          | Description
----------------------- | ------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------
-mc_app                 | mc                                                                       | Defines the app to install i.e. **mc**
-mc_dl_url              | <https://dl.min.io/client/{{> mc_app }}/release/linux-amd64/{{ mc_app }} | Defines URL to download the mc binary from.
-mc_bin_path            | "/usr/local/bin/{{ mc_app }}"                                            | Defined to dynamically set the appropriate path to store mc binary into. Defaults to (as generally available on any user's PATH): **/usr/local/bin/mc**
-mc_bin_permission_mode | '0755'                                                                   | Defines the permission mode level for the file.
+Variable      | Description
+------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------
+mc_app        | Defines the app to install i.e. **mc**
+mc_dl_url     | Defines URL to download the mc binary from.
+mc_bin_path   | Defined to dynamically set the appropriate path to store mc binary into. Defaults to (as generally available on any user's PATH): **/usr/local/bin/mc**
+mc_file_owner | Owner for the binary file of mc.
+mc_file_group | Group for the binary file of mc.
+mc_file_mode  | Mode for the binary file of mc.
 
 ## Dependencies
 
@@ -70,4 +74,4 @@ For customizing behavior of role (i.e. placing binary of **mc** package in diffe
 
 ## Author Information
 
-This role was created by [Ali Muhammad](https://www.linkedin.com/in/ali-muhammad-759791130/).
+This role was created by [Ali Muhammad](https://www.alimuhammad.dev/).
