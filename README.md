@@ -16,7 +16,9 @@ Available variables are listed below (located in `defaults/main.yml`):
 
 ```yaml
 mc_app: mc
-mc_dl_url: https://dl.min.io/client/{{ mc_app }}/release/linux-amd64/{{ mc_app }}
+mc_os: linux
+mc_arch: amd64
+mc_dl_url: https://dl.min.io/client/{{ mc_app }}/release/{{ mc_os }}-{{ mc_arch }}/{{ mc_app }}
 mc_bin_path: "/usr/local/bin/{{ mc_app }}"
 mc_file_owner: root
 mc_file_group: root
@@ -28,6 +30,8 @@ mc_file_mode: '0755'
 Variable      | Description
 ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------
 mc_app        | Defines the app to install i.e. **mc**
+mc_os         | Defines os type. Used for obtaining the correct type of binaries based on OS type. Defaults to: **linux**
+mc_arch       | Defines os architecture. Used to set the correct type of binaries based on OS System Architecture. Defaults to: **amd64**
 mc_dl_url     | Defines URL to download the mc binary from.
 mc_bin_path   | Defined to dynamically set the appropriate path to store mc binary into. Defaults to (as generally available on any user's PATH): **/usr/local/bin/mc**
 mc_file_owner | Owner for the binary file of mc.
