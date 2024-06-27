@@ -2,9 +2,17 @@
 # defaults file for mc
 
 mc_app: mc
-mc_os: linux
-mc_arch: amd64
-mc_dl_url: https://dl.min.io/client/{{ mc_app }}/release/{{ mc_os }}-{{ mc_arch }}/{{ mc_app }}
+mc_os: "{{ ansible_system | lower }}"
+mc_architecture_map:
+  amd64: amd64
+  arm: arm64
+  x86_64: amd64
+  armv6l: armv6
+  armv7l: armv7
+  aarch64: arm64
+  32-bit: "386"
+  64-bit: amd64
+mc_dl_url: https://dl.min.io/client/{{ mc_app }}/release/{{ mc_os }}-{{ mc_architecture_map[ansible_architecture] }}/{{ mc_app }}
 mc_bin_path: "/usr/local/bin/{{ mc_app }}"
 mc_file_owner: root
 mc_file_group: root
