@@ -16,9 +16,17 @@ Available variables are listed below (located in `defaults/main.yml`):
 
 ```yaml
 mc_app: mc
-mc_os: linux
-mc_arch: amd64
-mc_dl_url: https://dl.min.io/client/{{ mc_app }}/release/{{ mc_os }}-{{ mc_arch }}/{{ mc_app }}
+mc_os: "{{ ansible_system | lower }}"
+mc_architecture_map:
+  amd64: amd64
+  arm: arm64
+  x86_64: amd64
+  armv6l: armv6
+  armv7l: armv7
+  aarch64: arm64
+  32-bit: "386"
+  64-bit: amd64
+mc_dl_url: https://dl.min.io/client/{{ mc_app }}/release/{{ mc_os }}-{{ mc_architecture_map[ansible_architecture] }}/{{ mc_app }}
 mc_bin_path: "/usr/local/bin/{{ mc_app }}"
 mc_file_owner: root
 mc_file_group: root
@@ -27,16 +35,16 @@ mc_file_mode: '0755'
 
 ### Variables table:
 
-Variable      | Description
-------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------
-mc_app        | Defines the app to install i.e. **mc**
-mc_os         | Defines os type. Used for obtaining the correct type of binaries based on OS type. Defaults to: **linux**
-mc_arch       | Defines os architecture. Used to set the correct type of binaries based on OS System Architecture. Defaults to: **amd64**
-mc_dl_url     | Defines URL to download the mc binary from.
-mc_bin_path   | Defined to dynamically set the appropriate path to store mc binary into. Defaults to (as generally available on any user's PATH): **/usr/local/bin/mc**
-mc_file_owner | Owner for the binary file of mc.
-mc_file_group | Group for the binary file of mc.
-mc_file_mode  | Mode for the binary file of mc.
+Variable            | Description
+------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------
+mc_app              | Defines the app to install i.e. **mc**
+mc_os               | Defines os type. Used for obtaining the correct type of binaries based on OS type.
+mc_architecture_map | Defines os architecture. Used to set the correct type of binaries based on OS System Architecture.
+mc_dl_url           | Defines URL to download the mc binary from.
+mc_bin_path         | Defined to dynamically set the appropriate path to store mc binary into. Defaults to (as generally available on any user's PATH): **/usr/local/bin/mc**
+mc_file_owner       | Owner for the binary file of mc.
+mc_file_group       | Group for the binary file of mc.
+mc_file_mode        | Mode for the binary file of mc.
 
 ## Dependencies
 
